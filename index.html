@@ -24,6 +24,7 @@
             font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo, sans-serif;
             color: var(--text-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         header {
@@ -31,6 +32,7 @@
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
         }
         
         .header-container {
@@ -45,6 +47,11 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
         }
         
         nav ul {
@@ -65,6 +72,15 @@
         
         nav ul li a:hover {
             color: var(--light-gray);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
         .hero {
@@ -152,6 +168,9 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .feature-card:hover {
@@ -170,11 +189,18 @@
         
         .feature-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .feature-content h3 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
+        }
+        
+        .feature-content p {
+            flex-grow: 1;
         }
         
         .manuals {
@@ -192,6 +218,9 @@
             border-radius: 10px;
             overflow: hidden;
             transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .manual-card:hover {
@@ -210,10 +239,18 @@
         
         .manual-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .manual-content h3 {
             margin-bottom: 0.5rem;
+        }
+        
+        .manual-content p {
+            flex-grow: 1;
+            margin-bottom: 1rem;
         }
         
         .manual-content .difficulty {
@@ -251,11 +288,15 @@
             border-radius: 10px;
             padding: 2rem;
             position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .testimonial-text {
             margin-bottom: 1.5rem;
             font-style: italic;
+            flex-grow: 1;
         }
         
         .testimonial-author {
@@ -354,23 +395,74 @@
             padding: 2rem 2rem 0;
         }
         
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            nav ul li {
-                margin-left: 1rem;
-                margin-right: 1rem;
+        /* タブレット向けレスポンシブ設定 */
+        @media (max-width: 992px) {
+            .features-grid,
+            .manuals-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .hero h1 {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* スマートフォン向けレスポンシブ設定 */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+                display: none; /* デフォルトで非表示 */
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 0.8rem 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .features-grid,
+            .manuals-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                height: auto;
+                min-height: 50vh;
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
             
             .section {
@@ -378,7 +470,32 @@
             }
             
             .section-header h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-img, .manual-img {
+                height: 150px;
+            }
+        }
+        
+        /* 小さなスマートフォン向け */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .feature-img, .manual-img {
+                height: 120px;
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -386,8 +503,9 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">住宅設備マニュアル</div>
-            <nav>
+            <div class="logo"><a href="index.html">住宅設備マニュアル</a></div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#features">特徴</a></li>
                     <li><a href="#manuals">マニュアル</a></li>
@@ -605,5 +723,37 @@
             <p>&copy; 2025 住宅設備マニュアル. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // モバイルメニューの切り替え
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        });
+
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // モバイルメニューが開いていたら閉じる
+                    const nav = document.getElementById('main-nav');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
