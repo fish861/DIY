@@ -482,7 +482,7 @@
     <header>
         <div class="header-container">
             <div class="logo"><a href="index.html">住宅設備マニュアル</a></div>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             <nav id="main-nav">
                 <ul>
                     <li><a href="index.html#features">特徴</a></li>
@@ -516,7 +516,7 @@
                         <div class="step-content">床の清掃・確認</div>
                     </div>
                 </div>
-                <button class="see-more" id="toggle-details">詳細を見る見る</button>
+                <button class="see-more" id="toggle-details" onclick="toggleDetails('additional-details', this)">詳細を見る</button>
                 
                 <div id="additional-details" style="display: none; margin-top: 1.5rem;">
                     <div class="section-detail">
@@ -575,7 +575,7 @@
                         <div class="step-content">ワックスリングの設置</div>
                     </div>
                 </div>
-                <button class="see-more" id="toggle-details-2">詳細を見る</button>
+                <button class="see-more" id="toggle-details-2" onclick="toggleDetails('additional-details-2', this)">詳細を見る</button>
                 
                 <div id="additional-details-2" style="display: none; margin-top: 1.5rem;">
                     <div class="section-detail">
@@ -643,7 +643,7 @@
                         <div class="step-content">固定ボルトの締め付け</div>
                     </div>
                 </div>
-                <button class="see-more" id="toggle-details-3">詳細を見る</button>
+                <button class="see-more" id="toggle-details-3" onclick="toggleDetails('additional-details-3', this)">詳細を見る</button>
                 
                 <div id="additional-details-3" style="display: none; margin-top: 1.5rem;">
                     <div class="section-detail">
@@ -715,6 +715,3 @@
                     <div class="step">
                         <div class="step-number">12</div>
                         <div class="step-content">最終確認</div>
-                    </div>
-                </div>
-                <button class="see-more" id="toggle-details-4">詳細を
