@@ -207,10 +207,27 @@
             background-color: white;
         }
         
+        .manuals-category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .category-header h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
         .manuals-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-bottom: 2rem;
         }
         
         .manual-card {
@@ -262,6 +279,19 @@
         .manual-content .difficulty span {
             color: var(--accent-color);
             margin-right: 0.3rem;
+        }
+        
+        .see-more {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .see-more .btn {
+            background-color: var(--primary-color);
+        }
+        
+        .see-more .btn:hover {
+            background-color: #3a5a8c;
         }
         
         .testimonials {
@@ -566,53 +596,437 @@
                 <p>様々な住宅設備の設置・修繕マニュアルをご用意しています</p>
             </div>
             
-            <div class="manuals-grid">
-                <div class="manual-card">
-                    <div class="manual-img">🚽</div>
-                    <div class="manual-content">
-                        <h3>トイレの設置方法</h3>
-                        <div class="difficulty">
-                            <span>★</span><span>★</span><span>☆</span>
+            <!-- 内装・リフォーム関連 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🏠 内装・リフォーム関連</h3>
+                    <p>お部屋の雰囲気を一新するDIYマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">🪵</div>
+                        <div class="manual-content">
+                            <h3>フローリングの張替え</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>古いフローリングの撤去から新しいフローリングの施工まで、プロ級の仕上がりを目指します。</p>
+                            <a href="flooring.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
                         </div>
-                        <p>古いトイレの撤去から新しいトイレの設置まで、詳細な手順を解説しています。</p>
-                        <a href="toilet.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🎨</div>
+                        <div class="manual-content">
+                            <h3>壁のペンキ塗り</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>部屋の印象を大きく変える壁のペンキ塗り。下地処理から塗装までのコツを解説します。</p>
+                            <a href="painting.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🚪</div>
+                        <div class="manual-content">
+                            <h3>室内ドアの交換</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>開き戸から引き戸への変更など、室内ドアの交換方法を詳しく解説します。</p>
+                            <a href="door.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🧩</div>
+                        <div class="manual-content">
+                            <h3>壁紙の張替え</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>古い壁紙の剥がし方から新しい壁紙の選び方、貼り方まで詳しく解説します。</p>
+                            <a href="wallpaper.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="manual-card">
-                    <div class="manual-img">🪵</div>
-                    <div class="manual-content">
-                        <h3>フローリングの張替え</h3>
-                        <div class="difficulty">
-                            <span>★</span><span>★</span><span>★</span>
+                <div class="see-more">
+                    <a href="interior.html" class="btn">内装・リフォーム関連をもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- 水回り関連 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🚿 水回り関連</h3>
+                    <p>水まわりの設備交換・メンテナンスマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">🚽</div>
+                        <div class="manual-content">
+                            <h3>トイレの設置方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>古いトイレの撤去から新しいトイレの設置まで、詳細な手順を解説しています。</p>
+                            <a href="toilet.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
                         </div>
-                        <p>古いフローリングの撤去から新しいフローリングの施工まで、プロ級の仕上がりを目指します。</p>
-                        <a href="flooring.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🚿</div>
+                        <div class="manual-content">
+                            <h3>シャワーヘッドの交換</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>節水タイプや機能性の高いシャワーヘッドへの交換方法を解説します。</p>
+                            <a href="shower.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🚰</div>
+                        <div class="manual-content">
+                            <h3>キッチン蛇口の交換</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>キッチンの蛇口を新しいものに交換する方法とコツを紹介します。</p>
+                            <a href="faucet.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🧼</div>
+                        <div class="manual-content">
+                            <h3>排水口のトラブル解決</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>つまりや悪臭などの排水口トラブルの解決方法と予防策を解説します。</p>
+                            <a href="drain.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="manual-card">
-                    <div class="manual-img">🔨</div>
-                    <div class="manual-content">
-                        <h3>DIY初心者におすすめの大工道具</h3>
-                        <div class="difficulty">
-                            <span>★</span><span>☆</span><span>☆</span>
+                <div class="see-more">
+                    <a href="plumbing.html" class="btn">水回り関連をもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- 電気関連 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🔌 電気関連</h3>
+                    <p>安全に配慮した電気設備のDIYマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">💡</div>
+                        <div class="manual-content">
+                            <h3>照明器具の交換方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>照明器具の種類や電気工事の基本知識から実際の交換手順まで解説しています。</p>
+                            <a href="lighting.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
                         </div>
-                        <p>DIY初心者が揃えておくべき基本的な工具と選び方のポイントを紹介します。</p>
-                        <a href="tools.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🔋</div>
+                        <div class="manual-content">
+                            <h3>LED照明への交換</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>省エネ効果の高いLED照明への交換方法と選び方のポイントを紹介します。</p>
+                            <a href="led.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🔌</div>
+                        <div class="manual-content">
+                            <h3>コンセントプレートの交換</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>古くなったコンセントやスイッチのプレートを新しいものに交換する方法を解説します。</p>
+                            <a href="outlet.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🔄</div>
+                        <div class="manual-content">
+                            <h3>配線の整理方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>ごちゃごちゃした配線をスッキリさせるケーブル整理術を紹介します。</p>
+                            <a href="cable.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="manual-card">
-                    <div class="manual-img">💡</div>
-                    <div class="manual-content">
-                        <h3>照明器具の交換方法</h3>
-                        <div class="difficulty">
-                            <span>★</span><span>★</span><span>☆</span>
+                <div class="see-more">
+                    <a href="electrical.html" class="btn">電気関連をもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- 家具・収納DIY -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🪑 家具・収納DIY</h3>
+                    <p>手作り家具と収納アイデアのマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">📚</div>
+                        <div class="manual-content">
+                            <h3>簡単な本棚の作り方</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>初心者でも作れる基本的な本棚の設計から組み立てまでを解説します。</p>
+                            <a href="bookshelf.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
                         </div>
-                        <p>照明器具の種類や電気工事の基本知識から実際の交換手順まで解説しています。</p>
-                        <a href="lighting.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
                     </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🪑</div>
+                        <div class="manual-content">
+                            <h3>木製スツールの作り方</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>シンプルで丈夫な木製スツールの制作手順を図解入りで解説します。</p>
+                            <a href="stool.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">👞</div>
+                        <div class="manual-content">
+                            <h3>玄関収納の作り方</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>限られたスペースを有効活用する玄関収納の作り方を紹介します。</p>
+                            <a href="entrance-storage.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🔨</div>
+                        <div class="manual-content">
+                            <h3>DIY初心者におすすめの大工道具</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>DIY初心者が揃えておくべき基本的な工具と選び方のポイントを紹介します。</p>
+                            <a href="tools.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="see-more">
+                    <a href="furniture.html" class="btn">家具・収納DIYをもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- 外構・庭関連 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🏡 外構・庭関連</h3>
+                    <p>お庭やエクステリアのDIYマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">🪑</div>
+                        <div class="manual-content">
+                            <h3>ミニウッドデッキの作り方</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>週末DIYで作れる小型ウッドデッキの設計から施工までを解説します。</p>
+                            <a href="deck.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🌱</div>
+                        <div class="manual-content">
+                            <h3>DIY花壇の作り方</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>レンガやブロックを使った簡単なDIY花壇の作り方を紹介します。</p>
+                            <a href="garden.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🏣</div>
+                        <div class="manual-content">
+                            <h3>ポストの設置方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>壁掛け式や独立型ポストの設置方法と選び方のポイントを解説します。</p>
+                            <a href="mailbox.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🚧</div>
+                        <div class="manual-content">
+                            <h3>DIYフェンスの設置</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>プライバシーを確保するウッドフェンスの設置方法を解説します。</p>
+                            <a href="fence.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="see-more">
+                    <a href="exterior.html" class="btn">外構・庭関連をもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- メンテナンス・修繕 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>🔨 メンテナンス・修繕</h3>
+                    <p>住まいのメンテナンスと修繕のマニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">🧱</div>
+                        <div class="manual-content">
+                            <h3>壁の穴の補修方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>壁に開いた小さな穴から大きな穴まで、適切な補修方法を解説します。</p>
+                            <a href="wall-repair.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">💧</div>
+                        <div class="manual-content">
+                            <h3>コーキングの打ち替え</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>古くなったコーキングの除去から新しいコーキングの打ち方まで解説します。</p>
+                            <a href="caulking.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🚪</div>
+                        <div class="manual-content">
+                            <h3>ドアの調整方法</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>開閉不良や異音などのドアトラブルの調整方法を解説します。</p>
+                            <a href="door-adjustment.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🪟</div>
+                        <div class="manual-content">
+                            <h3>窓の結露対策</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>窓の結露を防ぐ方法と結露による被害を修復する方法を紹介します。</p>
+                            <a href="window-condensation.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="see-more">
+                    <a href="maintenance.html" class="btn">メンテナンス・修繕をもっと見る</a>
+                </div>
+            </div>
+            
+            <!-- スマートホーム化・省エネ対策 -->
+            <div class="manuals-category">
+                <div class="category-header">
+                    <h3>💡 スマートホーム化・省エネ対策</h3>
+                    <p>最新技術を取り入れた住まいの快適化マニュアル</p>
+                </div>
+                
+                <div class="manuals-grid">
+                    <div class="manual-card">
+                        <div class="manual-img">💡</div>
+                        <div class="manual-content">
+                            <h3>スマート照明の導入</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>☆</span>
+                            </div>
+                            <p>スマート電球やスマートスイッチを使った照明のIoT化を解説します。</p>
+                            <a href="smart-lighting.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">🔒</div>
+                        <div class="manual-content">
+                            <h3>スマートロックの設置</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>鍵の持ち歩きが不要になるスマートロックの選び方と設置方法を紹介します。</p>
+                            <a href="smart-lock.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">❄️</div>
+                        <div class="manual-content">
+                            <h3>窓の断熱対策</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>☆</span><span>☆</span>
+                            </div>
+                            <p>窓からの熱の出入りを抑える断熱フィルムや断熱カーテンの設置方法を解説します。</p>
+                            <a href="window-insulation.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-card">
+                        <div class="manual-img">☀️</div>
+                        <div class="manual-content">
+                            <h3>ミニソーラーパネルの設置</h3>
+                            <div class="difficulty">
+                                <span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p>ベランダなどに設置できる小型ソーラーパネルの選び方と設置方法を紹介します。</p>
+                            <a href="solar-panel.html" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem; margin-top: 1rem;">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="see-more">
+                    <a href="smart-home.html" class="btn">スマートホーム化・省エネ対策をもっと見る</a>
                 </div>
             </div>
         </div>
@@ -681,12 +1095,15 @@
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>マニュアル</h3>
+                <h3>マニュアルカテゴリ</h3>
                 <ul>
-                    <li><a href="toilet.html">トイレの設置方法</a></li>
-                    <li><a href="flooring.html">フローリングの張替え</a></li>
-                    <li><a href="tools.html">DIY初心者におすすめの大工道具</a></li>
-                    <li><a href="lighting.html">照明器具の交換方法</a></li>
+                    <li><a href="interior.html">内装・リフォーム関連</a></li>
+                    <li><a href="plumbing.html">水回り関連</a></li>
+                    <li><a href="electrical.html">電気関連</a></li>
+                    <li><a href="furniture.html">家具・収納DIY</a></li>
+                    <li><a href="exterior.html">外構・庭関連</a></li>
+                    <li><a href="maintenance.html">メンテナンス・修繕</a></li>
+                    <li><a href="smart-home.html">スマートホーム化・省エネ対策</a></li>
                 </ul>
             </div>
             
