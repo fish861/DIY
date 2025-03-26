@@ -1,0 +1,221 @@
+/* Additional styles for tools.html */
+:root {
+    --primary-color: #2b59a1;
+    --secondary-color: #f8f9fa;
+    --accent-color: #e6534c;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --dark-gray: #495057;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.page-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: translateX(-50%);
+}
+
+.note {
+    font-style: italic;
+    color: var(--dark-gray);
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.note:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tool-section {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.tool-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tool-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 0.8rem;
+    transition: padding-left 0.3s;
+}
+
+.tool-section:hover h2 {
+    padding-left: 1.2rem;
+}
+
+.tool-section h3 {
+    color: var(--dark-gray);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    transition: padding-left 0.3s;
+}
+
+.tool-section:hover h3 {
+    padding-left: 5px;
+}
+
+.tool-name {
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.tool-section:hover .tool-name {
+    color: #c83f39;
+}
+
+ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 5px;
+    transition: padding-left 0.3s;
+}
+
+li:hover {
+    padding-left: 8px;
+}
+
+li::marker {
+    color: var(--primary-color);
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: #d93f39;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #3d5a8a;
+}
+
+/* アニメーション遅延 */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .tool-section {
+        padding: 1.5rem;
+    }
+    
+    .bottom-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

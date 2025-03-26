@@ -4,169 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>フローリングの張替え手順</title>
-    <style>
-        body {
-            font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-        
-        .section-container {
-            display: block;
-            margin-bottom: 20px;
-        }
-        
-        .section {
-            width: 100%;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-        
-        .section-title {
-            font-size: 18px;
-            color: #1a73e8;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: bold;
-            background-color: #1a73e8;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 3px;
-        }
-        
-        .step-container {
-            margin-bottom: 10px;
-            padding: 0 5px;
-        }
-        
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .step-number {
-            background-color: #1a73e8;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            flex-shrink: 0;
-            font-size: 14px;
-        }
-        
-        .step-content {
-            flex: 1;
-        }
-        
-        .tools-materials {
-            display: block;
-            margin-bottom: 20px;
-        }
-        
-        .tools-materials-section {
-            width: 100%;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-        
-        .tools-materials-title {
-            font-size: 18px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: bold;
-            background-color: #333;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 3px;
-        }
-        
-        .tools-materials-list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .tool-material-item {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .tool-material-item:before {
-            content: "•";
-            color: #1a73e8;
-            margin-right: 8px;
-            font-weight: bold;
-        }
-        
-        .notes {
-            background-color: #fef2f2;
-            border-radius: 5px;
-            padding: 15px;
-            margin-top: 20px;
-            border-left: 4px solid #dc2626;
-        }
-        
-        .notes-title {
-            font-size: 18px;
-            color: #dc2626;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        .note-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 5px;
-        }
-        
-        .note-item:before {
-            content: "•";
-            color: #dc2626;
-            margin-right: 8px;
-            font-weight: bold;
-        }
-        
-        .see-more {
-            text-align: right;
-            color: #1a73e8;
-            font-size: 14px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="css/pages.css">
+    <meta name="description" content="DIY初心者向けのフローリング張替え手順ガイド。準備から仕上げまでの詳細な手順を解説します。">
 </head>
 <body>
-    <h1>フローリングの張替え手順</h1>
+    <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+    <div class="back-link" aria-label="ホームページに戻る">
+        <a href="index.html">ホームページに戻る</a>
+    </div>
+    <h1 id="main-content">フローリングの張替え手順</h1>
     
     <div class="section-container">
-        <div class="section">
+        <div class="section fade-in-element">
             <h2 class="section-title">準備作業</h2>
             <div class="step-container">
                 <div class="step">
@@ -182,68 +31,56 @@
                     <div class="step-content">床の清掃・確認</div>
                 </div>
             </div>
-            <div class="see-more" id="toggle-details">詳細を見る</div>
+            <div class="see-more" id="toggle-details" tabindex="0" role="button" aria-expanded="false" aria-controls="additional-details">追加作業の詳細を見る</div>
             
-            <div id="additional-details" style="display: none; margin-top: 15px;">
+            <div id="additional-details" style="display: none; margin-top: 15px;" aria-hidden="true">
                 <div class="section-detail">
-                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #333; background-color: #e6f2ff; padding: 5px 10px;">詳細な手順</h3>
-                    <ul style="list-style-type: none; padding-left: 10px; margin-top: 5px;">
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 部屋の寸法を測定しておく</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 工具の準備をしておく</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 作業スペースを確保する</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 必要なフローリング材の量を計算する</li>
+                    <h3>詳細な手順</h3>
+                    <ul>
+                        <li>部屋の寸法を測定しておく</li>
+                        <li>工具の準備をしておく</li>
+                        <li>作業スペースを確保する</li>
+                        <li>必要なフローリング材の量を計算する</li>
                     </ul>
                 </div>
                 
-                <div class="step-container" style="margin-top: 15px;">
+                <div class="step-container detailed-step">
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">1</div>
+                        <div class="step-number">1</div>
                         <div class="step-content">作業を始める前に、すべての家具を部屋から撤去します。大型家具は別の部屋に移動させるか、作業エリアから離れた場所に集めて保護カバーをかけます</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">2</div>
+                        <div class="step-number">2</div>
                         <div class="step-content">幅木があれば最初に取り外します。再利用する場合は慎重に外しましょう</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">3</div>
+                        <div class="step-number">3</div>
                         <div class="step-content">古いフローリングの継ぎ目からバールを使って慎重に剥がし始め、壁側に向かって作業を進めます</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">4</div>
+                        <div class="step-number">4</div>
                         <div class="step-content">撤去したフローリング材は分別してゴミ袋に入れ、釘やビスなどの金属部品は別に集めて処分します</div>
                     </div>
                 </div>
                 
-                <div class="notes" style="background-color: #ffebee; padding: 10px; margin-top: 15px; border-left: 3px solid #f44336; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #d32f2f;">注意点</h4>
-                    <div style="margin-bottom: 5px;">• 古いフローリングを剥がす際は、釘やトゲに注意してください。必ず手袋を着用しましょう。</div>
-                    <div style="margin-bottom: 5px;">• 大きな音が出る作業は、近隣に迷惑にならない時間帯に行うようにしましょう。</div>
-                    <div style="margin-bottom: 5px;">• 床下に配線や配管がある場合は、撤去作業中に傷つけないよう十分注意してください。</div>
+                <div class="detailed-notes">
+                    <h4>注意点</h4>
+                    <div>古いフローリングを剥がす際は、釘やトゲに注意してください。必ず手袋を着用しましょう。</div>
+                    <div>大きな音が出る作業は、近隣に迷惑にならない時間帯に行うようにしましょう。</div>
+                    <div>床下に配線や配管がある場合は、撤去作業中に傷つけないよう十分注意してください。</div>
                 </div>
                 
-                <div class="tips" style="background-color: #e8f5e9; padding: 10px; margin-top: 15px; border-left: 3px solid #4caf50; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #2e7d32;">アドバイス</h4>
-                    <div style="margin-bottom: 5px;">• 作業前に写真を撮っておくと、フローリングの配置パターンなど、後で参考にできます。</div>
-                    <div style="margin-bottom: 5px;">• 古いフローリングの下に予期せぬ問題（腐食など）が見つかる場合があります。予備日を含めたスケジュールを立てておくと安心です。</div>
-                    <div style="margin-bottom: 5px;">• 釘抜きやバールなど、撤去に必要な工具を事前に揃えておくと作業がスムーズです。</div>
+                <div class="tips">
+                    <h4>アドバイス</h4>
+                    <div>作業前に写真を撮っておくと、フローリングの配置パターンなど、後で参考にできます。</div>
+                    <div>古いフローリングの下に予期せぬ問題（腐食など）が見つかる場合があります。予備日を含めたスケジュールを立てておくと安心です。</div>
+                    <div>釘抜きやバールなど、撤去に必要な工具を事前に揃えておくと作業がスムーズです。</div>
                 </div>
             </div>
             
-            <script>
-                document.getElementById('toggle-details').addEventListener('click', function() {
-                    var details = document.getElementById('additional-details');
-                    if (details.style.display === 'none') {
-                        details.style.display = 'block';
-                        this.textContent = '詳細を閉じる';
-                    } else {
-                        details.style.display = 'none';
-                        this.textContent = '詳細を見る';
-                    }
-                });
-            </script>
         </div>
         
-        <div class="section">
+        <div class="section fade-in-element delay-1">
             <h2 class="section-title">設置準備</h2>
             <div class="step-container">
                 <div class="step">
@@ -255,68 +92,56 @@
                     <div class="step-content">防音シートの設置</div>
                 </div>
             </div>
-            <div class="see-more" id="toggle-details-2">詳細を見る</div>
+            <div class="see-more" id="toggle-details-2" tabindex="0" role="button" aria-expanded="false" aria-controls="additional-details-2">追加作業の詳細を見る</div>
             
-            <div id="additional-details-2" style="display: none; margin-top: 15px;">
+            <div id="additional-details-2" style="display: none; margin-top: 15px;" aria-hidden="true">
                 <div class="section-detail">
-                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #333; background-color: #e6f2ff; padding: 5px 10px;">詳細な手順</h3>
-                    <ul style="list-style-type: none; padding-left: 10px; margin-top: 5px;">
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 開封前に新しいフローリング材をすべて確認する</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 説明書を一読しておく</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 下地の状態を入念に確認する</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 湿気や水漏れがないか確認する</li>
+                    <h3>詳細な手順</h3>
+                    <ul>
+                        <li>開封前に新しいフローリング材をすべて確認する</li>
+                        <li>説明書を一読しておく</li>
+                        <li>下地の状態を入念に確認する</li>
+                        <li>湿気や水漏れがないか確認する</li>
                     </ul>
                 </div>
                 
-                <div class="step-container" style="margin-top: 15px;">
+                <div class="step-container detailed-step">
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">1</div>
+                        <div class="step-number">1</div>
                         <div class="step-content">下地床に凹みや亀裂がある場合は、フロア用パテや補修材で修復します。大きな段差や傾斜がある場合は、合板や調整材を使って平坦にします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">2</div>
+                        <div class="step-number">2</div>
                         <div class="step-content">木製下地の場合、腐食している部分は新しい材料に交換します。コンクリート下地の場合、ひび割れや欠けた部分を補修剤で修復します</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">3</div>
+                        <div class="step-number">3</div>
                         <div class="step-content">下地の補修後は十分に乾燥させます（最低24時間）。補修箇所を軽く研磨して平滑にします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">4</div>
+                        <div class="step-number">4</div>
                         <div class="step-content">フローリングの仕様に合った防音・防湿シートを選択し、下地の端から敷き始め、壁側に5cmほど立ち上げます</div>
                     </div>
                 </div>
                 
-                <div class="notes" style="background-color: #ffebee; padding: 10px; margin-top: 15px; border-left: 3px solid #f44336; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #d32f2f;">注意点</h4>
-                    <div style="margin-bottom: 5px;">• 下地の平坦さは非常に重要です。凹凸があるとフローリングが浮いたり、きしみ音の原因になります。</div>
-                    <div style="margin-bottom: 5px;">• 防音シートの継ぎ目はしっかりとテープで固定しないと、後にシートがずれて音の原因になります。</div>
-                    <div style="margin-bottom: 5px;">• 下地に湿気がある場合は、防湿シートを使用するか、完全に乾燥させてから作業を始めてください。</div>
+                <div class="detailed-notes">
+                    <h4>注意点</h4>
+                    <div>下地の平坦さは非常に重要です。凹凸があるとフローリングが浮いたり、きしみ音の原因になります。</div>
+                    <div>防音シートの継ぎ目はしっかりとテープで固定しないと、後にシートがずれて音の原因になります。</div>
+                    <div>下地に湿気がある場合は、防湿シートを使用するか、完全に乾燥させてから作業を始めてください。</div>
                 </div>
                 
-                <div class="tips" style="background-color: #e8f5e9; padding: 10px; margin-top: 15px; border-left: 3px solid #4caf50; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #2e7d32;">アドバイス</h4>
-                    <div style="margin-bottom: 5px;">• 下地の水平は水平器を使って複数箇所で確認すると、より正確です。</div>
-                    <div style="margin-bottom: 5px;">• 防音シートは少し重なるように敷くと、隙間ができにくくなります。</div>
-                    <div style="margin-bottom: 5px;">• 下地にコンクリートがある場合は、湿気対策として防湿シートが特に重要です。</div>
+                <div class="tips">
+                    <h4>アドバイス</h4>
+                    <div>下地の水平は水平器を使って複数箇所で確認すると、より正確です。</div>
+                    <div>防音シートは少し重なるように敷くと、隙間ができにくくなります。</div>
+                    <div>下地にコンクリートがある場合は、湿気対策として防湿シートが特に重要です。</div>
                 </div>
             </div>
             
-            <script>
-                document.getElementById('toggle-details-2').addEventListener('click', function() {
-                    var details = document.getElementById('additional-details-2');
-                    if (details.style.display === 'none') {
-                        details.style.display = 'block';
-                        this.textContent = '詳細を閉じる';
-                    } else {
-                        details.style.display = 'none';
-                        this.textContent = '詳細を見る';
-                    }
-                });
-            </script>
         </div>
         
-        <div class="section">
+        <div class="section fade-in-element delay-2">
             <h2 class="section-title">本体設置</h2>
             <div class="step-container">
                 <div class="step">
@@ -336,78 +161,66 @@
                     <div class="step-content">接着剤の塗布と固定</div>
                 </div>
             </div>
-            <div class="see-more" id="toggle-details-3">詳細を見る</div>
+            <div class="see-more" id="toggle-details-3" tabindex="0" role="button" aria-expanded="false" aria-controls="additional-details-3">追加作業の詳細を見る</div>
             
-            <div id="additional-details-3" style="display: none; margin-top: 15px;">
+            <div id="additional-details-3" style="display: none; margin-top: 15px;" aria-hidden="true">
                 <div class="section-detail">
-                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #333; background-color: #e6f2ff; padding: 5px 10px;">詳細な手順</h3>
-                    <ul style="list-style-type: none; padding-left: 10px; margin-top: 5px;">
-                        <li style="margin-bottom: 5px; font-size: 14px;">• フローリング材を部屋の環境に馴染ませる</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 施工パターンを決める</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 正確な採寸とカット位置の確認</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 専用工具の準備</li>
+                    <h3>詳細な手順</h3>
+                    <ul>
+                        <li>フローリング材を部屋の環境に馴染ませる</li>
+                        <li>施工パターンを決める</li>
+                        <li>正確な採寸とカット位置の確認</li>
+                        <li>専用工具の準備</li>
                     </ul>
                 </div>
                 
-                <div class="step-container" style="margin-top: 15px;">
+                <div class="step-container detailed-step">
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">1</div>
+                        <div class="step-number">1</div>
                         <div class="step-content">フローリング材は施工前に部屋の環境に48時間以上順応させます。最初の列は壁に沿って設置し、壁との間に10mm程度の隙間を確保します（膨張スペース）</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">2</div>
+                        <div class="step-number">2</div>
                         <div class="step-content">フローリング材の向きは一般的に部屋の長辺と平行にします。日光の入る窓がある場合は、光の方向に沿って設置すると視覚的に美しく見えます</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">3</div>
+                        <div class="step-number">3</div>
                         <div class="step-content">フローリング材同士をつなぐ際は、継ぎ目がしっかりと密着するまでゴムハンマーで軽く叩きます。継ぎ目に段差が生じないように注意してください</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">4</div>
+                        <div class="step-number">4</div>
                         <div class="step-content">壁際など、フローリング材をカットする必要がある場合は正確に採寸し、フローリングの表面を上にして電動ノコギリでカットします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">5</div>
+                        <div class="step-number">5</div>
                         <div class="step-content">複雑な形状（配管周りなど）は型紙を作成して正確にカットします。カット面はヤスリがけをして滑らかにします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">6</div>
+                        <div class="step-number">6</div>
                         <div class="step-content">直貼り工法の場合、専用の接着剤を櫛目コテを使って均一に塗布します。一度に広範囲に接着剤を塗らず、作業できる範囲に塗布しましょう</div>
                     </div>
                 </div>
                 
-                <div class="notes" style="background-color: #ffebee; padding: 10px; margin-top: 15px; border-left: 3px solid #f44336; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #d32f2f;">注意点</h4>
-                    <div style="margin-bottom: 5px;">• フローリング材の膨張を考慮して、壁との間に隙間を必ず確保してください。</div>
-                    <div style="margin-bottom: 5px;">• 電動工具の使用には十分注意し、安全マニュアルを遵守してください。</div>
-                    <div style="margin-bottom: 5px;">• 接着剤が乾くと取り除くのが難しくなります。はみ出した部分はすぐに拭き取りましょう。</div>
-                    <div style="margin-bottom: 5px;">• フローティング工法と直貼り工法では施工方法が大きく異なります。選択した工法に適した手順で作業してください。</div>
+                <div class="detailed-notes">
+                    <h4>注意点</h4>
+                    <div>フローリング材の膨張を考慮して、壁との間に隙間を必ず確保してください。</div>
+                    <div>電動工具の使用には十分注意し、安全マニュアルを遵守してください。</div>
+                    <div>接着剤が乾くと取り除くのが難しくなります。はみ出した部分はすぐに拭き取りましょう。</div>
+                    <div>フローティング工法と直貼り工法では施工方法が大きく異なります。選択した工法に適した手順で作業してください。</div>
                 </div>
                 
-                <div class="tips" style="background-color: #e8f5e9; padding: 10px; margin-top: 15px; border-left: 3px solid #4caf50; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #2e7d32;">アドバイス</h4>
-                    <div style="margin-bottom: 5px;">• フローリング材の段差を防ぐために、設置後すぐに水平を確認しましょう。</div>
-                    <div style="margin-bottom: 5px;">• 残材は予備として保管しておくと、将来部分的な修理が必要になった時に便利です。</div>
-                    <div style="margin-bottom: 5px;">• フローリング材のカットは、計測を2回行ってから1回切るという原則を守ると失敗が少なくなります。</div>
-                    <div style="margin-bottom: 5px;">• 複数の部屋をまたぐ場合、ドア部分には伸縮目地を設けると、温度や湿度の変化による床の膨張収縮に対応できます。</div>
+                <div class="tips">
+                    <h4>アドバイス</h4>
+                    <div>フローリング材の段差を防ぐために、設置後すぐに水平を確認しましょう。</div>
+                    <div>残材は予備として保管しておくと、将来部分的な修理が必要になった時に便利です。</div>
+                    <div>フローリング材のカットは、計測を2回行ってから1回切るという原則を守ると失敗が少なくなります。</div>
+                    <div>複数の部屋をまたぐ場合、ドア部分には伸縮目地を設けると、温度や湿度の変化による床の膨張収縮に対応できます。</div>
                 </div>
             </div>
             
-            <script>
-                document.getElementById('toggle-details-3').addEventListener('click', function() {
-                    var details = document.getElementById('additional-details-3');
-                    if (details.style.display === 'none') {
-                        details.style.display = 'block';
-                        this.textContent = '詳細を閉じる';
-                    } else {
-                        details.style.display = 'none';
-                        this.textContent = '詳細を見る';
-                    }
-                });
-            </script>
         </div>
         
-        <div class="section">
+        <div class="section fade-in-element delay-3">
             <h2 class="section-title">仕上げ確認</h2>
             <div class="step-container">
                 <div class="step">
@@ -423,76 +236,64 @@
                     <div class="step-content">最終清掃</div>
                 </div>
             </div>
-            <div class="see-more" id="toggle-details-4">詳細を見る</div>
+            <div class="see-more" id="toggle-details-4" tabindex="0" role="button" aria-expanded="false" aria-controls="additional-details-4">追加作業の詳細を見る</div>
             
-            <div id="additional-details-4" style="display: none; margin-top: 15px;">
+            <div id="additional-details-4" style="display: none; margin-top: 15px;" aria-hidden="true">
                 <div class="section-detail">
-                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #333; background-color: #e6f2ff; padding: 5px 10px;">詳細な手順</h3>
-                    <ul style="list-style-type: none; padding-left: 10px; margin-top: 5px;">
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 全体の水平確認方法</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 幅木の正確なカット方法</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• 効果的な清掃手順</li>
-                        <li style="margin-bottom: 5px; font-size: 14px;">• ワックス塗布の確認</li>
+                    <h3>詳細な手順</h3>
+                    <ul>
+                        <li>全体の水平確認方法</li>
+                        <li>幅木の正確なカット方法</li>
+                        <li>効果的な清掃手順</li>
+                        <li>ワックス塗布の確認</li>
                     </ul>
                 </div>
                 
-                <div class="step-container" style="margin-top: 15px;">
+                <div class="step-container detailed-step">
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">1</div>
+                        <div class="step-number">1</div>
                         <div class="step-content">設置したフローリング全体の水平を水平器で複数箇所確認します。歩行時に異音がしないか、たわみがないかをチェックします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">2</div>
+                        <div class="step-number">2</div>
                         <div class="step-content">フローリングの表面を確認し、傷や汚れがないことを確認します。万一不具合があれば修正します</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">3</div>
+                        <div class="step-number">3</div>
                         <div class="step-content">壁とフローリングの間の隙間を隠すために幅木を取り付けます。幅木は適切な長さにカットし、角部分は45度角でカットして美しく仕上げます</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">4</div>
+                        <div class="step-number">4</div>
                         <div class="step-content">接着剤または釘で幅木を壁に固定します。釘を使用する場合は、釘穴を補修材で埋めて目立たなくします</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">5</div>
+                        <div class="step-number">5</div>
                         <div class="step-content">設置作業で発生したすべての木くずやゴミを掃除機で吸い取り、フローリング表面の埃や指紋を乾いた柔らかい布で拭き取ります</div>
                     </div>
                     <div class="step">
-                        <div class="step-number" style="background-color: #2196F3;">6</div>
+                        <div class="step-number">6</div>
                         <div class="step-content">必要に応じてフローリング専用のクリーナーで清掃し、メーカーの推奨に従い、必要であればワックスを塗布します</div>
                     </div>
                 </div>
                 
-                <div class="notes" style="background-color: #ffebee; padding: 10px; margin-top: 15px; border-left: 3px solid #f44336; font-size: 14px;">
-                    <h4 style="margin-top: 0; margin-bottom: 5px; color: #d32f2f;">注意点</h4>
-                    <div style="margin-bottom: 5px;">• フローリングの確認は十分な時間をかけて行ってください。設置不良があると後々大きな問題になることがあります。</div>
-                    <div style="margin-bottom: 5px;">• 幅木を取り付ける際は、フローリングに直接ビスや釘を打ち込まないでください。膨張収縮の妨げになります。</div>
-        <div style="margin-bottom: 5px;">• ワックスを塗布する場合は、フローリングメーカーが推奨する製品を使用し、使用方法を守ってください。</div>
-        <div style="margin-bottom: 5px;">• 清掃時に過度の水分はフローリングの変形や剥がれの原因になります。固く絞った布で拭き取るようにしましょう。</div>
+                <div class="detailed-notes">
+                    <h4>注意点</h4>
+                    <div>フローリングの確認は十分な時間をかけて行ってください。設置不良があると後々大きな問題になることがあります。</div>
+                    <div>幅木を取り付ける際は、フローリングに直接ビスや釘を打ち込まないでください。膨張収縮の妨げになります。</div>
+        <div>ワックスを塗布する場合は、フローリングメーカーが推奨する製品を使用し、使用方法を守ってください。</div>
+        <div>清掃時に過度の水分はフローリングの変形や剥がれの原因になります。固く絞った布で拭き取るようにしましょう。</div>
     </div>
     
-    <div class="tips" style="background-color: #e8f5e9; padding: 10px; margin-top: 15px; border-left: 3px solid #4caf50; font-size: 14px;">
-        <h4 style="margin-top: 0; margin-bottom: 5px; color: #2e7d32;">アドバイス</h4>
-        <div style="margin-bottom: 5px;">• 幅木のコーナー部分は、コーナーカッターを使うと、より美しく仕上がります。</div>
-        <div style="margin-bottom: 5px;">• フローリング設置後24時間程度は重い家具を置かないでください。接着剤が完全に固まるのを待ちましょう。</div>
-        <div style="margin-bottom: 5px;">• 家具を元に戻す際は、フローリングを保護するためにフェルトパッドを家具の脚に取り付けることをお勧めします。</div>
-        <div style="margin-bottom: 5px;">• 設置完了後の写真を撮っておくと、将来の修理や補修の際に役立つことがあります。</div>
+    <div class="tips">
+        <h4>アドバイス</h4>
+        <div>幅木のコーナー部分は、コーナーカッターを使うと、より美しく仕上がります。</div>
+        <div>フローリング設置後24時間程度は重い家具を置かないでください。接着剤が完全に固まるのを待ちましょう。</div>
+        <div>家具を元に戻す際は、フローリングを保護するためにフェルトパッドを家具の脚に取り付けることをお勧めします。</div>
+        <div>設置完了後の写真を撮っておくと、将来の修理や補修の際に役立つことがあります。</div>
     </div>
     
-    <script>
-        document.getElementById('toggle-details-4').addEventListener('click', function() {
-            var details = document.getElementById('additional-details-4');
-            if (details.style.display === 'none') {
-                details.style.display = 'block';
-                this.textContent = '詳細を閉じる';
-            } else {
-                details.style.display = 'none';
-                this.textContent = '詳細を見る';
-            }
-        });
-    </script>
     
-    <div class="tools-materials-section">
+    <div class="tools-materials-section fade-in-element delay-4">
         <h2 class="tools-materials-title">必要な工具</h2>
         <div class="tools-materials-list">
             <div class="tool-material-item">電動ノコギリ</div>
@@ -508,7 +309,7 @@
         </div>
     </div>
     
-    <div class="tools-materials-section">
+    <div class="tools-materials-section fade-in-element delay-4">
         <h2 class="tools-materials-title">必要な材料</h2>
         <div class="tools-materials-list">
             <div class="tool-material-item">フローリング材</div>
@@ -522,7 +323,7 @@
         </div>
     </div>
     
-    <div class="notes">
+    <div class="notes fade-in-element delay-4">
         <h2 class="notes-title">注意事項</h2>
         <div class="note-item">適切な保護具（手袋、ゴーグル等）を着用する</div>
         <div class="note-item">電動工具の取扱説明書を必ず読む</div>
@@ -530,9 +331,10 @@
         <div class="note-item">湿気対策を十分に行う</div>
         <div class="note-item">不安な場合は専門業者に依頼する</div>
     </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="ページトップへ戻る"></button>
+    
+    <script src="js/pages.js"></script>
+    <script src="js/flooring.js"></script>
 </body>
 </html>
-
-
-
-
