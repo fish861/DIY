@@ -24,8 +24,16 @@
                     <li role="none"><a href="create-manual.html" role="menuitem" class="create-manual-link">マニュアル作成</a></li>
                 </ul>
             </nav>
+        <div class="header-search">
+            <form action="search.html" method="get" class="header-search-form">
+                <input type="text" name="q" placeholder="検索..." class="header-search-input" aria-label="マニュアルを検索">
+                <button type="submit" class="header-search-btn" aria-label="検索">
+                    <span>🔍</span>
+                </button>
+            </form>
         </div>
-    </header>
+    </div>
+</header>
     <style>
 /* ヘッダーの検索ボックス */
 .header-search {
