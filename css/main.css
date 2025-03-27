@@ -125,7 +125,20 @@ nav ul li a:hover {
 nav ul li a:hover::after {
     transform: scaleX(1);
 }
+.create-manual-link {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px;
+}
 
+.create-manual-link::after {
+    display: none !important;
+}
+
+.create-manual-link:hover {
+    background-color: #d93f39;
+    transform: translateY(-2px);
+}
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -690,10 +703,17 @@ nav ul li a:hover::after {
     color: rgba(255,255,255,0.9);
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
 .cta .btn {
     background-color: white;
     color: var(--accent-color);
-    margin-top: 1rem;
     border: 2px solid white;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
@@ -701,6 +721,17 @@ nav ul li a:hover::after {
 .cta .btn:hover {
     background-color: transparent;
     color: white;
+}
+
+.cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta .btn-secondary:hover {
+    background-color: white;
+    color: var(--accent-color);
 }
 
 footer {
