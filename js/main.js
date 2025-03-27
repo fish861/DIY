@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // スクロールアニメーションの初期チェック
     checkScroll();
+    const headerSearchForm = document.querySelector('.header-search-form');
+    
+    if (headerSearchForm) {
+        headerSearchForm.addEventListener('submit', function(e) {
+            const searchInput = this.querySelector('.header-search-input');
+            
+            // 空欄の場合は送信しない
+            if (!searchInput.value.trim()) {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+    }
 });
 
 // モバイルメニューの切り替え
