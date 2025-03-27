@@ -24,14 +24,24 @@
                     <li role="none"><a href="create-manual.html" role="menuitem" class="create-manual-link">マニュアル作成</a></li>
                 </ul>
             </nav>
-        <div class="header-search">
-            <form action="search.html" method="get" class="header-search-form">
-                <input type="text" name="q" placeholder="検索..." class="header-search-input" aria-label="マニュアルを検索">
-                <button type="submit" class="header-search-btn" aria-label="検索">
-                    <span>🔍</span>
-                </button>
-            </form>
-        </div>
+<div class="header-search">
+    <form action="search.html" method="get" class="header-search-form" enctype="multipart/form-data">
+        <input type="text" name="q" placeholder="検索..." class="header-search-input" aria-label="マニュアルを検索">
+        <button type="submit" class="header-search-btn" aria-label="検索">
+            <span>🔍</span>
+        </button>
+        <!-- 写真検索ボタン -->
+        <button type="button" class="photo-search-btn" aria-label="写真で検索">
+            <span>📷</span>
+        </button>
+        <input type="file" accept="image/*" class="photo-search-input" name="photo_search" aria-label="写真をアップロード">
+        <!-- モバイル用検索タイプ切り替えボタン -->
+        <button type="button" class="search-type-switch" aria-label="検索タイプを切り替え" title="写真検索に切り替え">
+            📷
+        </button>
+        <span class="upload-indicator">写真をタップしてアップロード</span>
+    </form>
+</div>
     </div>
 </header>
 
