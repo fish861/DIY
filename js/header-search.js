@@ -59,17 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // モバイル用の検索タイプ切り替え
-    const searchTypeSwitches = document.querySelectorAll('.search-type-switch');
-    
-    searchTypeSwitches.forEach(switchElem => {
-        switchElem.addEventListener('click', function(e) {
-            e.preventDefault();
-            const form = this.closest('form');
-            form.classList.toggle('photo-search-active');
-            
-            }
-        });
-    });
 });
