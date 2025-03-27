@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マニュアル詳細 | 住宅設備マニュアル</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/view-manual.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="index.html">住宅設備マニュアル</a></div>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav id="main-nav" aria-label="メインナビゲーション">
+                <ul role="menubar">
+                    <li role="none"><a href="index.html#features" role="menuitem">特徴</a></li>
+                    <li role="none"><a href="index.html#manuals" role="menuitem">マニュアル</a></li>
+                    <li role="none"><a href="index.html#testimonials" role="menuitem">お客様の声</a></li>
+                    <li role="none"><a href="index.html#contact" role="menuitem">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="back-link">
+            <a href="index.html">トップページに戻る</a>
+        </div>
+        
+        <section id="manual-container" class="manual-container">
+            <!-- マニュアルコンテンツはJavaScriptで動的に生成 -->
+            <div class="loading">
+                <p>マニュアルを読み込み中...</p>
+            </div>
+        </section>
+        
+        <div class="manual-actions">
+            <a href="create-manual.html" class="btn">新しいマニュアルを作成する</a>
+        </div>
+        
+        <!-- マニュアルが見つからない場合のメッセージ -->
+        <div id="not-found" class="not-found" style="display: none;">
+            <h2>マニュアルが見つかりませんでした</h2>
+            <p>指定されたマニュアルは存在しないか、削除された可能性があります。</p>
+            <div class="not-found-actions">
+                <a href="index.html" class="btn btn-secondary">トップページに戻る</a>
+                <a href="create-manual.html" class="btn">新しいマニュアルを作成する</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>マニュアルカテゴリ</h3>
+                <ul>
+                    <li><a href="interior.html">内装・リフォーム関連</a></li>
+                    <li><a href="plumbing.html">水回り関連</a></li>
+                    <li><a href="electrical.html">電気関連</a></li>
+                    <li><a href="furniture.html">家具・収納DIY</a></li>
+                    <li><a href="exterior.html">外構・庭関連</a></li>
+                    <li><a href="maintenance.html">メンテナンス・修繕</a></li>
+                    <li><a href="smart-home.html">スマートホーム化・省エネ対策</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>サポート</h3>
+                <ul>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="guide.html">ご利用ガイド</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>会社情報</h3>
+                <ul>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>SNS</h3>
+                <ul>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 住宅設備マニュアル. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る"></a>
+    <script src="js/main.js"></script>
+    <script src="js/view-manual.js"></script>
+</body>
+</html>

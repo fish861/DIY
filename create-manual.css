@@ -1,0 +1,533 @@
+/* マニュアル作成ページ用スタイル */
+:root {
+    --primary-color: #2b59a1;
+    --secondary-color: #f8f9fa;
+    --accent-color: #e6534c;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --dark-gray: #495057;
+    --border-color: #ced4da;
+    --focus-color: #4a6da7;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+.create-manual-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.page-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-color);
+    transform: translateX(-50%);
+}
+
+.page-header p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+}
+
+.manual-editor {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.editor-section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.editor-section:last-child {
+    border-bottom: none;
+}
+
+.editor-section h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.section-info {
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.required {
+    color: var(--accent-color);
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 3px rgba(74, 109, 167, 0.2);
+    outline: none;
+}
+
+.difficulty-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.difficulty-selector input[type="radio"] {
+    display: none;
+}
+
+.difficulty-selector label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.difficulty-selector input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.emoji-picker {
+    position: relative;
+}
+
+.emoji-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.emoji-suggestions span {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.emoji-suggestions span:hover {
+    background-color: var(--light-gray);
+}
+
+.input-with-btn {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.input-with-btn input {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.add-btn:hover {
+    background-color: #3d5a8a;
+}
+
+.remove-btn {
+    background-color: var(--light-gray);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-btn:hover:not(:disabled) {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.remove-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.step-container {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.step-header h3 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.remove-step-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--dark-gray);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.remove-step-btn:hover:not(:disabled) {
+    color: var(--accent-color);
+}
+
+.remove-step-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.editor-actions {
+    padding: 1.5rem 2rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5vh auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent-color);
+}
+
+.modal h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* プレビュースタイル */
+#preview-container {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+/* ボタンスタイル */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: #d93f39;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #3d5a8a;
+}
+
+/* バリデーションスタイル */
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.input-error {
+    border-color: var(--error-color) !important;
+}
+
+/* プレビューのマニュアルスタイル */
+.preview-manual {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+}
+
+.preview-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.preview-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.preview-category {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.preview-difficulty {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.preview-description {
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.preview-section {
+    margin-bottom: 2rem;
+}
+
+.preview-section h2 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.preview-tools-materials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.preview-tools, .preview-materials {
+    flex: 1;
+    min-width: 250px;
+}
+
+.preview-tools h3, .preview-materials h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.preview-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.preview-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.preview-list li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.preview-steps {
+    counter-reset: step-counter;
+}
+
+.preview-step {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    padding-left: 3rem;
+}
+
+.preview-step-number {
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.preview-step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.preview-notes {
+    background-color: #fff5f5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.preview-notes h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .preview-tools-materials {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .editor-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .difficulty-selector {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .difficulty-selector label {
+        width: 100%;
+    }
+    
+    .step-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

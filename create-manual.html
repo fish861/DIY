@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マニュアル作成 | 住宅設備マニュアル</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/create-manual.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="index.html">住宅設備マニュアル</a></div>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav id="main-nav" aria-label="メインナビゲーション">
+                <ul role="menubar">
+                    <li role="none"><a href="index.html#features" role="menuitem">特徴</a></li>
+                    <li role="none"><a href="index.html#manuals" role="menuitem">マニュアル</a></li>
+                    <li role="none"><a href="index.html#testimonials" role="menuitem">お客様の声</a></li>
+                    <li role="none"><a href="index.html#contact" role="menuitem">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="create-manual-container">
+        <section class="page-header">
+            <h1>マニュアル作成</h1>
+            <p>あなたのDIY知識を共有しましょう</p>
+        </section>
+
+        <div class="manual-editor">
+            <form id="manual-form">
+                <!-- 基本情報セクション -->
+                <div class="editor-section">
+                    <h2>基本情報</h2>
+                    <div class="form-group">
+                        <label for="manual-title">マニュアルタイトル <span class="required">*</span></label>
+                        <input type="text" id="manual-title" name="manual-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="manual-category">カテゴリ <span class="required">*</span></label>
+                        <select id="manual-category" name="manual-category" required>
+                            <option value="">カテゴリを選択</option>
+                            <option value="interior">内装・リフォーム関連</option>
+                            <option value="plumbing">水回り関連</option>
+                            <option value="electrical">電気関連</option>
+                            <option value="furniture">家具・収納DIY</option>
+                            <option value="exterior">外構・庭関連</option>
+                            <option value="maintenance">メンテナンス・修繕</option>
+                            <option value="smart-home">スマートホーム化・省エネ対策</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="manual-difficulty">難易度 <span class="required">*</span></label>
+                        <div class="difficulty-selector">
+                            <input type="radio" id="difficulty-1" name="manual-difficulty" value="1" checked>
+                            <label for="difficulty-1">★☆☆ (初心者向け)</label>
+                            
+                            <input type="radio" id="difficulty-2" name="manual-difficulty" value="2">
+                            <label for="difficulty-2">★★☆ (中級者向け)</label>
+                            
+                            <input type="radio" id="difficulty-3" name="manual-difficulty" value="3">
+                            <label for="difficulty-3">★★★ (上級者向け)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="manual-description">概要説明 <span class="required">*</span></label>
+                        <textarea id="manual-description" name="manual-description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="manual-thumbnail">アイコン (絵文字) <span class="required">*</span></label>
+                        <div class="emoji-picker">
+                            <input type="text" id="manual-thumbnail" name="manual-thumbnail" placeholder="🔨" required>
+                            <div class="emoji-suggestions">
+                                <span>🔨</span>
+                                <span>🔧</span>
+                                <span>🪚</span>
+                                <span>🪛</span>
+                                <span>🧰</span>
+                                <span>🪑</span>
+                                <span>🚪</span>
+                                <span>🪟</span>
+                                <span>🧱</span>
+                                <span>🪵</span>
+                                <span>🚿</span>
+                                <span>🚽</span>
+                                <span>🛁</span>
+                                <span>🚰</span>
+                                <span>💡</span>
+                                <span>🔌</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 準備物セクション -->
+                <div class="editor-section">
+                    <h2>準備物</h2>
+                    <p class="section-info">必要な道具と材料を記入してください</p>
+                    
+                    <div class="form-group">
+                        <label for="tools-list">必要な道具</label>
+                        <div id="tools-container">
+                            <div class="input-with-btn">
+                                <input type="text" class="tool-item" name="tools[]" placeholder="電動ドライバー">
+                                <button type="button" class="remove-btn" disabled>削除</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-tool" class="add-btn">+ 道具を追加</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="materials-list">必要な材料</label>
+                        <div id="materials-container">
+                            <div class="input-with-btn">
+                                <input type="text" class="material-item" name="materials[]" placeholder="木材">
+                                <button type="button" class="remove-btn" disabled>削除</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-material" class="add-btn">+ 材料を追加</button>
+                    </div>
+                </div>
+                
+                <!-- 作業手順セクション -->
+                <div class="editor-section">
+                    <h2>作業手順</h2>
+                    <p class="section-info">ステップごとに詳細な手順を記入してください</p>
+                    
+                    <div id="steps-container">
+                        <div class="step-container">
+                            <div class="step-header">
+                                <h3>ステップ 1</h3>
+                                <button type="button" class="remove-step-btn" disabled>削除</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="step-1-title">ステップタイトル <span class="required">*</span></label>
+                                <input type="text" id="step-1-title" name="steps[0][title]" required placeholder="下準備をする">
+                            </div>
+                            <div class="form-group">
+                                <label for="step-1-content">詳細説明 <span class="required">*</span></label>
+                                <textarea id="step-1-content" name="steps[0][content]" rows="4" required placeholder="作業に必要な道具と材料を準備し、作業スペースを確保します。"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="add-step" class="add-btn">+ ステップを追加</button>
+                </div>
+                
+                <!-- 注意点セクション -->
+                <div class="editor-section">
+                    <h2>注意点</h2>
+                    <p class="section-info">作業時の注意事項や安全確保のポイントを記入してください</p>
+                    
+                    <div id="notes-container">
+                        <div class="input-with-btn">
+                            <input type="text" class="note-item" name="notes[]" placeholder="作業時は必ず保護メガネを着用してください">
+                            <button type="button" class="remove-btn" disabled>削除</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-note" class="add-btn">+ 注意点を追加</button>
+                </div>
+                
+                <!-- プレビューと送信ボタン -->
+                <div class="editor-actions">
+                    <button type="button" id="preview-btn" class="btn btn-secondary">プレビュー</button>
+                    <button type="submit" id="save-btn" class="btn">保存する</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- プレビューモーダル -->
+        <div id="preview-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>マニュアルプレビュー</h2>
+                <div id="preview-container"></div>
+                <div class="modal-actions">
+                    <button id="edit-btn" class="btn btn-secondary">編集に戻る</button>
+                    <button id="confirm-save-btn" class="btn">このまま保存する</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 完了モーダル -->
+        <div id="complete-modal" class="modal">
+            <div class="modal-content">
+                <h2>マニュアルを作成しました！</h2>
+                <p>あなたのマニュアルが正常に保存されました。</p>
+                <div class="modal-actions">
+                    <a href="index.html" class="btn btn-secondary">トップページに戻る</a>
+                    <a id="view-manual-link" href="#" class="btn">マニュアルを見る</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>マニュアルカテゴリ</h3>
+                <ul>
+                    <li><a href="interior.html">内装・リフォーム関連</a></li>
+                    <li><a href="plumbing.html">水回り関連</a></li>
+                    <li><a href="electrical.html">電気関連</a></li>
+                    <li><a href="furniture.html">家具・収納DIY</a></li>
+                    <li><a href="exterior.html">外構・庭関連</a></li>
+                    <li><a href="maintenance.html">メンテナンス・修繕</a></li>
+                    <li><a href="smart-home.html">スマートホーム化・省エネ対策</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>サポート</h3>
+                <ul>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="guide.html">ご利用ガイド</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>会社情報</h3>
+                <ul>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>SNS</h3>
+                <ul>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 住宅設備マニュアル. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る"></a>
+    <script src="js/main.js"></script>
+    <script src="js/create-manual.js"></script>
+</body>
+</html>
