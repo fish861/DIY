@@ -69,13 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const form = this.closest('form');
             form.classList.toggle('photo-search-active');
             
-            // 切り替え時にラベルを変更
-            if (form.classList.contains('photo-search-active')) {
-                this.textContent = '📝';
-                this.setAttribute('title', 'テキスト検索に切り替え');
-            } else {
-                this.textContent = '📷';
-                this.setAttribute('title', '写真検索に切り替え');
             }
         });
     });
