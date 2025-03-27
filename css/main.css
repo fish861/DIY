@@ -1122,3 +1122,66 @@ a:focus, button:focus {
     font-size: 20px;
     font-weight: bold;
 }
+/* ヘッダーサイズの調整 - 特にモバイル向け */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 0; /* 上下のパディングを減らす */
+        min-height: auto; /* 最小の高さを自動に */
+    }
+    
+    .header-container {
+        padding: 0.3rem 1rem; /* コンテナのパディングも縮小 */
+    }
+    
+    .logo {
+        font-size: 1.3rem; /* ロゴのフォントサイズを小さく */
+    }
+    
+    .logo a {
+        padding: 0.3rem 0; /* ロゴのパディングを調整 */
+    }
+    
+    /* ナビゲーションメニューのアイテムも縮小 */
+    nav ul li {
+        margin-left: 1rem;
+    }
+    
+    nav ul li a {
+        padding: 0.3rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* 検索ボックスのサイズも調整 */
+    .header-search {
+        margin-top: 0.5rem;
+    }
+    
+    .header-search-form {
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .header-search-input {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.85rem;
+    }
+    
+    /* ヘッダーの全体の高さをさらに調整 */
+    .hero {
+        margin-top: -0.5rem; /* ヘッダーとヒーローセクションの間隔を調整 */
+    }
+}
+
+/* スマートフォンのさらに小さな画面向け */
+@media (max-width: 480px) {
+    header {
+        padding: 0.4rem 0;
+    }
+    
+    .logo {
+        font-size: 1.2rem; /* さらに小さなロゴサイズ */
+    }
+    
+    .header-container {
+        padding: 0.2rem 0.8rem;
+    }
+}
