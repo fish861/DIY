@@ -139,6 +139,70 @@ nav ul li a:hover::after {
     background-color: #d93f39;
     transform: translateY(-2px);
 }
+/* ヘッダーの検索ボックス */
+.header-search {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.3rem 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.header-search-form:focus-within {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    width: 150px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.header-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header-search-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .header-search {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        order: 3;
+    }
+    
+    .header-search-form {
+        width: 100%;
+    }
+    
+    .header-search-input {
+        width: 100%;
+    }
+}
 .mobile-menu-btn {
     display: none;
     background: none;
